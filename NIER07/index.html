@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/h/NIER07/akuma" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+        <li class="btn active">
+          <a href="javascript:void" onclick="go('/h/NIER07/akuma')">Akumadrive</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://sbbrisk.com/e/nrmsfpx3ezl3.html?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dycy9qHlesoOyDB5Ud3bjTUpA2Bk48uofCnFIgeeNtM1zFepQSAPg5ieR9F_AJjUo_Vs2izkdOSDThWgn14OASwR7ysZgGlbfXTn-M3b-LUCD8hRn0D7_Nwht8ARdMQaT8_cKs')">Google V2</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://krakenfiles.com/embed-video/UQPS1CMR2n')">Kraken</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://streamtape.to/e/8Kzv1RVWwrsovQ9?poster=https://kuma-stream.github.io/src/poster.png')">Streamtape</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
